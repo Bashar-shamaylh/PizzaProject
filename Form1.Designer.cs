@@ -56,7 +56,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.CrustType = new System.Windows.Forms.Label();
             this.lblCrustType = new System.Windows.Forms.Label();
-            this.Toppings = new System.Windows.Forms.Label();
+            this.lblToppings = new System.Windows.Forms.Label();
             this.lblSize = new System.Windows.Forms.Label();
             this.lbToppingsContent = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -85,13 +85,16 @@
             // rdbSmall
             // 
             this.rdbSmall.AutoSize = true;
+            this.rdbSmall.Enabled = false;
             this.rdbSmall.Location = new System.Drawing.Point(30, 34);
             this.rdbSmall.Name = "rdbSmall";
             this.rdbSmall.Size = new System.Drawing.Size(71, 24);
             this.rdbSmall.TabIndex = 2;
             this.rdbSmall.TabStop = true;
+            this.rdbSmall.Tag = "5";
             this.rdbSmall.Text = "Small";
             this.rdbSmall.UseVisualStyleBackColor = true;
+            this.rdbSmall.CheckedChanged += new System.EventHandler(this.rdbSmall_CheckedChanged);
             // 
             // rdbMeduim
             // 
@@ -101,8 +104,10 @@
             this.rdbMeduim.Size = new System.Drawing.Size(89, 24);
             this.rdbMeduim.TabIndex = 3;
             this.rdbMeduim.TabStop = true;
+            this.rdbMeduim.Tag = "10";
             this.rdbMeduim.Text = "Meduim";
             this.rdbMeduim.UseVisualStyleBackColor = true;
+            this.rdbMeduim.CheckedChanged += new System.EventHandler(this.rdbMeduim_CheckedChanged);
             // 
             // rdbLarge
             // 
@@ -112,8 +117,10 @@
             this.rdbLarge.Size = new System.Drawing.Size(73, 24);
             this.rdbLarge.TabIndex = 4;
             this.rdbLarge.TabStop = true;
+            this.rdbLarge.Tag = "15";
             this.rdbLarge.Text = "Large";
             this.rdbLarge.UseVisualStyleBackColor = true;
+            this.rdbLarge.CheckedChanged += new System.EventHandler(this.rdbLarge_CheckedChanged);
             // 
             // gbSize
             // 
@@ -146,8 +153,10 @@
             this.rdbThickCrust.Size = new System.Drawing.Size(117, 24);
             this.rdbThickCrust.TabIndex = 5;
             this.rdbThickCrust.TabStop = true;
+            this.rdbThickCrust.Tag = "15";
             this.rdbThickCrust.Text = "Thick Crust";
             this.rdbThickCrust.UseVisualStyleBackColor = true;
+            this.rdbThickCrust.CheckedChanged += new System.EventHandler(this.rdbThickCrust_CheckedChanged);
             // 
             // rdbThinCrust
             // 
@@ -157,8 +166,10 @@
             this.rdbThinCrust.Size = new System.Drawing.Size(109, 24);
             this.rdbThinCrust.TabIndex = 4;
             this.rdbThinCrust.TabStop = true;
+            this.rdbThinCrust.Tag = "10";
             this.rdbThinCrust.Text = "Thin Crust";
             this.rdbThinCrust.UseVisualStyleBackColor = true;
+            this.rdbThinCrust.CheckedChanged += new System.EventHandler(this.rdbThinCrust_CheckedChanged);
             // 
             // gbToppings
             // 
@@ -182,8 +193,10 @@
             this.ckMashrooms.Name = "ckMashrooms";
             this.ckMashrooms.Size = new System.Drawing.Size(120, 24);
             this.ckMashrooms.TabIndex = 5;
+            this.ckMashrooms.Tag = "2";
             this.ckMashrooms.Text = "Mashrooms";
             this.ckMashrooms.UseVisualStyleBackColor = true;
+            this.ckMashrooms.CheckedChanged += new System.EventHandler(this.ckMashrooms_CheckedChanged);
             // 
             // ckTomatos
             // 
@@ -192,8 +205,10 @@
             this.ckTomatos.Name = "ckTomatos";
             this.ckTomatos.Size = new System.Drawing.Size(97, 24);
             this.ckTomatos.TabIndex = 4;
+            this.ckTomatos.Tag = "2";
             this.ckTomatos.Text = "Tomatos";
             this.ckTomatos.UseVisualStyleBackColor = true;
+            this.ckTomatos.CheckedChanged += new System.EventHandler(this.ckTomatos_CheckedChanged);
             // 
             // ckGreenPeppers
             // 
@@ -202,8 +217,10 @@
             this.ckGreenPeppers.Name = "ckGreenPeppers";
             this.ckGreenPeppers.Size = new System.Drawing.Size(149, 24);
             this.ckGreenPeppers.TabIndex = 3;
+            this.ckGreenPeppers.Tag = "2";
             this.ckGreenPeppers.Text = "Green Peppers";
             this.ckGreenPeppers.UseVisualStyleBackColor = true;
+            this.ckGreenPeppers.CheckedChanged += new System.EventHandler(this.ckGreenPeppers_CheckedChanged);
             // 
             // ckOlives
             // 
@@ -212,8 +229,10 @@
             this.ckOlives.Name = "ckOlives";
             this.ckOlives.Size = new System.Drawing.Size(76, 24);
             this.ckOlives.TabIndex = 2;
+            this.ckOlives.Tag = "2";
             this.ckOlives.Text = "Olives";
             this.ckOlives.UseVisualStyleBackColor = true;
+            this.ckOlives.CheckedChanged += new System.EventHandler(this.ckOlives_CheckedChanged);
             // 
             // ckOnion
             // 
@@ -222,8 +241,10 @@
             this.ckOnion.Name = "ckOnion";
             this.ckOnion.Size = new System.Drawing.Size(75, 24);
             this.ckOnion.TabIndex = 1;
+            this.ckOnion.Tag = "2";
             this.ckOnion.Text = "Onion";
             this.ckOnion.UseVisualStyleBackColor = true;
+            this.ckOnion.CheckedChanged += new System.EventHandler(this.ckOnion_CheckedChanged);
             // 
             // ckExtraChees
             // 
@@ -232,8 +253,10 @@
             this.ckExtraChees.Name = "ckExtraChees";
             this.ckExtraChees.Size = new System.Drawing.Size(126, 24);
             this.ckExtraChees.TabIndex = 0;
+            this.ckExtraChees.Tag = "2";
             this.ckExtraChees.Text = "Extra Chees";
             this.ckExtraChees.UseVisualStyleBackColor = true;
+            this.ckExtraChees.CheckedChanged += new System.EventHandler(this.ckExtraChees_CheckedChanged);
             // 
             // gbWhereToEat
             // 
@@ -254,8 +277,10 @@
             this.rbEatOut.Size = new System.Drawing.Size(89, 24);
             this.rbEatOut.TabIndex = 1;
             this.rbEatOut.TabStop = true;
+            this.rbEatOut.Tag = "0";
             this.rbEatOut.Text = "Eat Out";
             this.rbEatOut.UseVisualStyleBackColor = true;
+            this.rbEatOut.CheckedChanged += new System.EventHandler(this.rbEatOut_CheckedChanged);
             // 
             // rbEatIn
             // 
@@ -265,8 +290,10 @@
             this.rbEatIn.Size = new System.Drawing.Size(76, 24);
             this.rbEatIn.TabIndex = 0;
             this.rbEatIn.TabStop = true;
+            this.rbEatIn.Tag = "0";
             this.rbEatIn.Text = "Eat In";
             this.rbEatIn.UseVisualStyleBackColor = true;
+            this.rbEatIn.CheckedChanged += new System.EventHandler(this.rbEatIn_CheckedChanged);
             // 
             // bOrderPizza
             // 
@@ -276,6 +303,7 @@
             this.bOrderPizza.TabIndex = 9;
             this.bOrderPizza.Text = "Order Pizza";
             this.bOrderPizza.UseVisualStyleBackColor = true;
+            this.bOrderPizza.Click += new System.EventHandler(this.bOrderPizza_Click);
             // 
             // bRestForm
             // 
@@ -285,6 +313,7 @@
             this.bRestForm.TabIndex = 10;
             this.bRestForm.Text = "Rest form";
             this.bRestForm.UseVisualStyleBackColor = true;
+            this.bRestForm.Click += new System.EventHandler(this.bRestForm_Click);
             // 
             // gbOrderSummary
             // 
@@ -294,7 +323,7 @@
             this.gbOrderSummary.Controls.Add(this.label3);
             this.gbOrderSummary.Controls.Add(this.CrustType);
             this.gbOrderSummary.Controls.Add(this.lblCrustType);
-            this.gbOrderSummary.Controls.Add(this.Toppings);
+            this.gbOrderSummary.Controls.Add(this.lblToppings);
             this.gbOrderSummary.Controls.Add(this.lblSize);
             this.gbOrderSummary.Controls.Add(this.lbToppingsContent);
             this.gbOrderSummary.Controls.Add(this.label2);
@@ -313,7 +342,7 @@
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Script MT Bold", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblTotalPrice.Location = new System.Drawing.Point(75, 290);
+            this.lblTotalPrice.Location = new System.Drawing.Point(81, 318);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(51, 38);
             this.lblTotalPrice.TabIndex = 12;
@@ -322,7 +351,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 257);
+            this.label4.Location = new System.Drawing.Point(6, 283);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 20);
             this.label4.TabIndex = 11;
@@ -331,7 +360,7 @@
             // lblWhereToEat
             // 
             this.lblWhereToEat.AutoSize = true;
-            this.lblWhereToEat.Location = new System.Drawing.Point(126, 212);
+            this.lblWhereToEat.Location = new System.Drawing.Point(127, 254);
             this.lblWhereToEat.Name = "lblWhereToEat";
             this.lblWhereToEat.Size = new System.Drawing.Size(58, 20);
             this.lblWhereToEat.TabIndex = 10;
@@ -340,7 +369,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 212);
+            this.label3.Location = new System.Drawing.Point(7, 254);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 20);
             this.label3.TabIndex = 9;
@@ -349,7 +378,7 @@
             // CrustType
             // 
             this.CrustType.AutoSize = true;
-            this.CrustType.Location = new System.Drawing.Point(120, 172);
+            this.CrustType.Location = new System.Drawing.Point(114, 214);
             this.CrustType.Name = "CrustType";
             this.CrustType.Size = new System.Drawing.Size(91, 20);
             this.CrustType.TabIndex = 8;
@@ -358,20 +387,21 @@
             // lblCrustType
             // 
             this.lblCrustType.AutoSize = true;
-            this.lblCrustType.Location = new System.Drawing.Point(6, 172);
+            this.lblCrustType.Location = new System.Drawing.Point(0, 214);
             this.lblCrustType.Name = "lblCrustType";
             this.lblCrustType.Size = new System.Drawing.Size(110, 20);
             this.lblCrustType.TabIndex = 7;
             this.lblCrustType.Text = " Crust Type :";
             // 
-            // Toppings
+            // lblToppings
             // 
-            this.Toppings.AutoSize = true;
-            this.Toppings.Location = new System.Drawing.Point(24, 121);
-            this.Toppings.Name = "Toppings";
-            this.Toppings.Size = new System.Drawing.Size(109, 20);
-            this.Toppings.TabIndex = 6;
-            this.Toppings.Text = "No Toppings";
+            this.lblToppings.Location = new System.Drawing.Point(18, 114);
+            this.lblToppings.MaximumSize = new System.Drawing.Size(200, 200);
+            this.lblToppings.MinimumSize = new System.Drawing.Size(100, 100);
+            this.lblToppings.Name = "lblToppings";
+            this.lblToppings.Size = new System.Drawing.Size(200, 100);
+            this.lblToppings.TabIndex = 6;
+            this.lblToppings.Text = "No Toppings";
             // 
             // lblSize
             // 
@@ -439,8 +469,10 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MinimumSize = new System.Drawing.Size(200, 100);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.gbSize.ResumeLayout(false);
             this.gbSize.PerformLayout();
             this.gbCrust.ResumeLayout(false);
@@ -487,7 +519,7 @@
         private System.Windows.Forms.Label lbToppingsContent;
         private System.Windows.Forms.Label CrustType;
         private System.Windows.Forms.Label lblCrustType;
-        private System.Windows.Forms.Label Toppings;
+        private System.Windows.Forms.Label lblToppings;
         private System.Windows.Forms.Label lblSize;
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Label label4;
